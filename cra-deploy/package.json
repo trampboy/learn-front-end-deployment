@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "oss:cli": "coscmd upload -r -H \"{'Cache-Control':'no-cache'}\" -s build / --ignore \"static/**\" --delete && coscmd upload -r -H \"{'Cache-Control':'max-age=31536000'}\" -s build/static static --delete"
   },
   "eslintConfig": {
     "extends": [
